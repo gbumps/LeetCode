@@ -22,9 +22,9 @@ public class Prob1493 {
 //    Explanation: You must delete one element.
 //
 //
-//            Constraints:
+//    Constraints:
 //
-//            1 <= nums.length <= 105
+//    1 <= nums.length <= 105
 //    nums[i] is either 0 or 1.
 //
     public int longestSubarray(int[] nums) {
