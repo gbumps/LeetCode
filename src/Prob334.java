@@ -1,8 +1,3 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 public class Prob334 {
 
     public boolean increasingTriplet(int[] nums) {

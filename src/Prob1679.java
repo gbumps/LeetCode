@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class Prob1679 {
     public int maxOperations(int[] nums, int k) {
