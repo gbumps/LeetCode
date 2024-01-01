@@ -3,9 +3,11 @@ import java.util.ArrayDeque;
 public class Prob735 {
 //    We are given an array asteroids of integers representing asteroids in a row.
 //
-//    For each asteroid, the absolute value represents its size, and the sign represents its direction (positive meaning right, negative meaning left). Each asteroid moves at the same speed.
+//    For each asteroid, the absolute value represents its size, and the sign represents
+//    its direction (positive meaning right, negative meaning left). Each asteroid moves at the same speed.
 //
-//    Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one will explode. If both are the same size, both will explode. Two asteroids moving in the same direction will never meet.
+//    Find out the state of the asteroids after all collisions.
+//    If two asteroids meet, the smaller one will explode. If both are the same size, both will explode. Two asteroids moving in the same direction will never meet.
 
 //    Example 1:
 //
@@ -36,8 +38,10 @@ public class Prob735 {
         int i = 1;
         while (i < asteroids.length) {
             int r = asteroids[i];
-            boolean isNegative = !stack.isEmpty() && stack.getLast() < 0;
-            if ((r < 0 && isNegative) || (r > 0) || stack.isEmpty()) {
+            boolean isNegative = !stack.isEmpty() && stack.getLast() < 0 && r < 0;
+            if (isNegative) {
+                stack.add(r);
+            } else if ((r > 0) || stack.isEmpty()) {
                 stack.add(r);
             } else if (r < 0) {
                 int l = stack.getLast();
